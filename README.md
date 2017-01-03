@@ -7,10 +7,9 @@ Training Dataset
 
 Training dataset was generated first by driving the vehicle in simulated mode around the track for several loops.  However, this set of training data is not enough as I found out that model based on this set didnot learn to recover when the vehicle was wandering off the track.  
 
-Eventually, my training data consists of two lasps weaving out the right and recoering, and another lap weaving out to the left and recovering and 4 laps of centerline driving.
+Eventually, my training data consists of two laps weaving out the right and recovering, and another lap weaving out to the left and recovering and 4 laps of centerline driving.
 
-The dataset was randomly shuffled and then split into 
-
+The dataset was randomly shuffled and then split into 90/10 for training and validation dataset. 
 
 Network Architecture
 
@@ -68,5 +67,6 @@ ________________________________________________________________________________
 dense_4 (Dense)                  (None, 1)             11          activation_8[0][0]               
 ====================================================================================================
 
+I optimized the 
 Training Process
-I tried 5 epochs.  The training accuracy is about 55.8% and validation accuracy is 
+I tried 5 epochs.  The training accuracy is about 56% and validation accuracy is 57%%
