@@ -24,6 +24,8 @@ The model has 3 5X5 convolutional layers, followed by 2 3x3 convolutional layers
 
 https://github.com/annieguan/BehaviorCloning/blob/master/architecture.png
 
+The model summary has the following:
+
 https://github.com/annieguan/BehaviorCloning/blob/master/model_summary.png
 
 
