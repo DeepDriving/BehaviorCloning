@@ -8,7 +8,7 @@ Training Dataset
 
 Training dataset was generated first by driving the vehicle in simulated mode around the track for several loops.  However, this set of training data is not enough as I found out that model based on this set didnot learn to recover when the vehicle was wandering off the track.  
 
-Eventually, my training data consists of two laps weaving out the right and recovering, and another lap weaving out to the left and recovering and 4 laps of centerline driving.
+Eventually, my training data consists of two laps weaving out the right and recovering, and another two laps weaving out to the left and recovering and 4 laps of centerline driving.
 
 An example of the training image:
 
