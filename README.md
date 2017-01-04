@@ -24,6 +24,8 @@ The model has 3 5X5 convolutional layers, followed by 2 3x3 convolutional layers
 
 https://github.com/annieguan/BehaviorCloning/blob/master/architecture.png
 
+https://github.com/annieguan/BehaviorCloning/blob/master/model_summary.png
+
 
 I addded max pooling with pool size of (2,2) to prevent overfitting. 
 
