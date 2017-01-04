@@ -10,6 +10,10 @@ Training dataset was generated first by driving the vehicle in simulated mode ar
 
 Eventually, my training data consists of two laps weaving out the right and recovering, and another lap weaving out to the left and recovering and 4 laps of centerline driving.
 
+An example of the training image:
+
+https://github.com/annieguan/BehaviorCloning/blob/master/center_2016_12_06_04_27_10_409.jpg
+
 The dataset was normalized and then randomly shuffled.  I split into 90/10 for training and validation dataset. 
 
 Model
