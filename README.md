@@ -17,6 +17,8 @@ The model I used is the one described in the NVIDIA’s End to End Learning for 
 
 The model has 3 5X5 convolutional layers, followed by 2 3x3 convolutional layers, and  3 fully connected layers and output layer.  
 
+https://github.com/annieguan/BehaviorCloning/blob/master/architecture.png
+
 
 I optimized the model using Adam Optimizer with a mean-sqaured-error loss metric.
 
