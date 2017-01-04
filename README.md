@@ -15,8 +15,7 @@ Model
 
 The model I used is the one described in the NVIDIA’s End to End Learning for Self Driving Cars.  
 
-The model has 3 5X5 convolutional layers, followed by 2 3x3 convolutional layers, and  3 fully connected layers and output layer as following:
-
+The model has 3 5X5 convolutional layers, followed by 2 3x3 convolutional layers, and  3 fully connected layers and output layer.  
 
 
 I optimized the model using Adam Optimizer with a mean-sqaured-error loss metric.
