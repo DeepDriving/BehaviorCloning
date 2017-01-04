@@ -11,11 +11,12 @@ Eventually, my training data consists of two laps weaving out the right and reco
 
 The dataset was randomly shuffled and then split into 90/10 for training and validation dataset. 
 
-Network Architecture
+Model
 
-The network architecture I used is the one described in the NVIDIA’s End to End Learning for Self Driving Cars.  
+The model I used is the one described in the NVIDIA’s End to End Learning for Self Driving Cars.  
 
-The model has 3 5X5 convolutional layers, followed by 2 3x3 convolutional layers, and  
+The model has 3 5X5 convolutional layers, followed by 2 3x3 convolutional layers, and  3 fully connected layers and output layer.
+
 
 ____________________________________________________________________________________________________
 Layer (type)                     Output Shape          Param #     Connected to                     
