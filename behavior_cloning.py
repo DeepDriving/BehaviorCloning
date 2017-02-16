@@ -11,6 +11,7 @@ import csv
 from scipy.misc import imread, imresize
 import matplotlib.pyplot as plt
 
+#Hyperparameters
 batch_size = 32 
 nb_epochs = 5 
 
@@ -59,6 +60,7 @@ def gen_batches(data_list,batch_size):
 #Split the train and validation data set
 train_list,validation_list=load_data()
 
+#Model Architecture
 model = Sequential()
 
 # 1st conv layer--5*5 convolution with 24 filters
