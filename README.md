@@ -1,8 +1,19 @@
 # BehaviorCloning
 
-Udacity self driving course-BehaviorCloning Project
+Model Architecture Design,
+Architecture Characteristics,
+Data Preprocessing and
+Model Training (Include hyperparameter tuni
 
-This project is to use deep neural network to do autonmous driving in the simulated enviroment. The simulator run in two modes:  training mode and autonomous mode. During the training mode, we collect the data such as brake, throttle, speed, steering angle as well as images from the vehicle.  In autonomous mode, live image is fed into the trained model which then generates steering angle.
+# Udacity self driving course-BehaviorCloning Project
+
+This project is to use deep neural network to do autonmous driving in the simulated enviroment. The simulator run in two modes:  training mode and autonomous mode. 
+
+During the training mode, we collect the data such as brake, throttle, speed, steering angle as well as images from the vehicle.  In autonomous mode, live image is fed into the trained model which then generates steering angle.
+
+By manually driving the vehicle in Training Mode and using the images from the vehicle as features, with the associated steering angles as labels, I was able to develop a Deep Neural Network to control the steering of the vehicle as it drove around the track.
+
+## Model Architecture Design
 
 Training Dataset 
 
@@ -18,18 +29,17 @@ The dataset was normalized and then randomly shuffled.  I split into 90/10 for t
 
 Model
 
-The model I used is the one described in the NVIDIA’s End to End Learning for Self Driving Cars.  
+The network architecture that I used was inspired by a paper titled [End to End Learning for Self-Driving Cars](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf). In that paper, they present the following figure which depicts the architecture that they used to map images to steering commands:
 
-The model has 3 5X5 convolutional layers, followed by 2 3x3 convolutional layers, and 3 fully connected layers and output layer as described in this paper.
+![Network Architecture](./architecture.png)
 
-https://github.com/annieguan/BehaviorCloning/blob/master/architecture.png
+This model consists of data normalization, followed by 3 5x5 convolutional layers, followed by 2 3x3 convolutional layers, followed by 3 fully connected layers, followed by the output layer. The only modification that I made to this architecture was the addition of a 2-Dimensional max-pooling layer after each convolutional layer to further reduce the number of model parameters and help reduce overfitting.
+
 
 The model summary has the following:
 
 https://github.com/annieguan/BehaviorCloning/blob/master/model_summary.png
 
-
-I addded max pooling with pool size of (2,2) to prevent overfitting. 
 
 I optimized the model using Adam Optimizer with a mean-sqaured-error loss metric.
 
