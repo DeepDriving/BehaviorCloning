@@ -41,21 +41,14 @@ The dataset was normalized and then randomly shuffled to prevent overfitting.  I
 
 ### Model Training
 
-I tried 5 epochs.  The training accuracy was about 56% and validation accuracy was 57% each epcho.  Adding more epochs does not seem to improve the accuracy.
+I tried 5 epochs.  The training accuracy was about 56% and validation accuracy was 57% each epcho.  Adding more epochs does not seem to improve the accuracy.  
 
-I also tried 
+I also tried different batch size and it doesnot seem to have too much difference on the accuracy.  I finally settled to have to 5 epochs and batch size is 32.
 
-The model summary has the following:
+I optimized the model using Adam Optimizer with a mean-sqaured-error loss metric.  Adam Optimizer seems to have better performance than GradientDescent.
 
-https://github.com/annieguan/BehaviorCloning/blob/master/model_summary.png
+Here is the model summary:
 
+![Model Summary](./model_summary.png)
 
-I optimized the model using Adam Optimizer with a mean-sqaured-error loss metric.
-
-Training Process
-
-I tried 5 epochs.  The training accuracy was about 56% and validation accuracy was 57% each epcho.  Adding more epochs doesnot improve the accuracy.
-
-Testing Process
-
-drive.py is modified to normalize the images as I did in training phase.
+For Testing process, I modified drive.py to normalize the images as I did in training phase.   I ran the simulator in Autonomous Mode to test if the model was able to generate steering angles which would keep the vehicle on the track as it drove around the loop.
