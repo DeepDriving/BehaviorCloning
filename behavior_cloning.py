@@ -14,7 +14,6 @@ import matplotlib.pyplot as plt
 batch_size = 32 
 nb_epochs = 5 
 
-
 def preprocessing(image):
 
     image= image.astype('float32')
@@ -22,7 +21,7 @@ def preprocessing(image):
 
     return image
 
-
+#Function to load data and split the training and validation set
 def load_data():
 	with open('driving_log.csv', 'r') as f:
 		reader = csv.reader(f)
@@ -38,7 +37,7 @@ def load_data():
 	validatation_list = data[split:]
 	return (train_list,validatation_list)
 
-
+# Generator to generate batches of simulation data 
 def gen_batches(data_list,batch_size):
 	features = []
 	labels = []
@@ -57,7 +56,7 @@ def gen_batches(data_list,batch_size):
 				features = []
 				labels= []
 
-
+#Split the train and validation data set
 train_list,validation_list=load_data()
 
 model = Sequential()
@@ -98,13 +97,18 @@ model.add(Activation('relu'))
 model.add(Dense(50))
 model.add(Activation('relu'))
 
+#3rd fully connected layer
 model.add(Dense(10))
 model.add(Activation('relu'))
 
+#output layer
 model.add(Dense(1))
 
 model.summary()
+
+#Use AdamOptimizer as the optimizer and MSE as the loss function
 model.compile(optimizer='adam',loss='mse',metrics=['accuracy'])
+
 
 train_samples_per_epoch = batch_size * math.floor(len(train_list)/batch_size)
 valiation_samples_per_epoch = batch_size * math.floor(len(validation_list)/batch_size)
@@ -113,6 +117,7 @@ history = model.fit_generator(gen_batches(train_list,batch_size), len(train_list
 
 
 
+#save model to file
 json = model.to_json()
 model.save_weights('model.h5')
 with open('model.json', 'w') as f:
